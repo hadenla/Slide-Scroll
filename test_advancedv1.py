@@ -453,7 +453,7 @@ def main():
                 break
             
             # Случайный интервал между действиями (1-6 секунд)
-            base_wait = random.randint(1, 6)  # Исправлено: вернул 1-6 секунд
+            base_wait = random.randint(1, 3)  # Исправлено: Уменьшил интервал до максимум 3 секунды
             variation = random.uniform(0.8, 1.2)
             wait_time = max(0.8, base_wait * variation)
             
