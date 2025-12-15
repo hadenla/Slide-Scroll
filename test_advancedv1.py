@@ -79,7 +79,7 @@ class HumanMouseMover:
         
         # Параметры человеческих движений
         self.human_params = {
-            'min_speed': 0.12,      # Минимальная скорость (сек на 100 пикселей)
+            'min_speed': 0.22,      # Минимальная скорость (сек на 100 пикселей)
             'max_speed': 0.45,      # Максимальная скорость (немного быстрее)
             'jitter_amount': 2,     # Случайные микро-подёргивания
             'pause_variation': 0.25,# Вариация пауз между действиями
@@ -332,7 +332,7 @@ class HumanMouseMover:
         elif action == "scroll":
             # Улучшенная прокрутка колесом мыши (3-4 прокрутки)
             scroll_direction = random.choice([-1, 1])
-            scroll_amount = random.randint(3, 4) * scroll_direction
+            scroll_amount = random.randint(30, 40, 15, 20) * scroll_direction
             
             # Делаем несколько скроллов с естественными паузами
             for i in range(abs(scroll_amount)):
